@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Categories - Super Mall</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="../../index.html">Super Mall Admin</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="manage-shops.html">Shops</a></li>
+                    <li><a href="manage-offers.html">Offers</a></li>
+                    <li><a href="manage-categories.html">Categories</a></li>
+                    <li><a href="#" id="logoutBtn" class="btn-primary">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="manage-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Manage Categories & Floors</h2>
+                    <button id="addCategoryBtn" class="btn-primary">+ Add New Category</button>
+                </div>
+
+                <div class="content-grid">
+                    <div class="categories-panel">
+                        <h3>Categories</h3>
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category Name</th>
+                                        <th>Description</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="categoriesTableBody">
+                                    <tr>
+                                        <td colspan="3" class="text-center">Loading categories...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="floors-panel">
+                        <h3>Floor Information</h3>
+                        <div id="floorsInfo">
+                            <div class="floor-card">
+                                <h4>Ground Floor</h4>
+                                <p id="groundFloorShops">0 Shops</p>
+                            </div>
+                            <div class="floor-card">
+                                <h4>First Floor</h4>
+                                <p id="firstFloorShops">0 Shops</p>
+                            </div>
+                            <div class="floor-card">
+                                <h4>Second Floor</h4>
+                                <p id="secondFloorShops">0 Shops</p>
+                            </div>
+                            <div class="floor-card">
+                                <h4>Third Floor</h4>
+                                <p id="thirdFloorShops">0 Shops</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add/Edit Category Modal -->
+        <div id="categoryModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="modalTitle">Add New Category</h3>
+                <form id="categoryForm" class="admin-form">
+                    <input type="hidden" id="categoryId">
+                    <div class="form-group">
+                        <label for="categoryName">Category Name *</label>
+                        <input type="text" id="categoryName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="categoryDescription">Description</label>
+                        <textarea id="categoryDescription" rows="3"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Save Category</button>
+                        <button type="button" class="btn-secondary" id="cancelCategoryBtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Super Mall. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../../js/admin-categories.js"></script>
+</body>
+</html>

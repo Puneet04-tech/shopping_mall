@@ -1,0 +1,353 @@
+/* User Interface Styles */
+
+/* Filters Bar */
+.filters-bar {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.75rem;
+    border-radius: 14px;
+}
+
+.filters-bar .search-input {
+    flex: 1;
+    min-width: 260px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+}
+
+.filters-bar .filter-select {
+    min-width: 150px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+}
+
+.toolbar {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Shops Grid */
+.shops-section {
+    padding: 2rem 0;
+}
+
+.shops-section h2 {
+    margin-bottom: 2rem;
+}
+
+.shops-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.shop-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.shop-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37, 99, 235, 0.3);
+    box-shadow: var(--shadow);
+}
+
+.shop-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #0b1224;
+}
+
+.shop-card-content {
+    padding: 1.4rem;
+}
+
+.shop-card-content h3 {
+    color: #e2e8f0;
+    margin-bottom: 0.35rem;
+    font-size: 1.2rem;
+}
+
+.shop-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.93rem;
+    color: #94a3b8;
+}
+
+.shop-card-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Shop Detail */
+.shop-detail-section {
+    padding: 2rem 0;
+}
+
+.shop-detail-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow-soft);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.shop-detail-header {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.shop-detail-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.shop-detail-info h2 {
+    color: #e2e8f0;
+    margin-bottom: 0.8rem;
+}
+
+.shop-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.shop-info-item {
+    padding: 0.5rem 0;
+}
+
+.shop-info-item strong {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Products Grid */
+.products-section {
+    padding: 2rem 0;
+}
+
+.products-section h2 {
+    margin-bottom: 2rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37, 99, 235, 0.3);
+    box-shadow: var(--shadow);
+}
+
+.product-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #0b1224;
+}
+
+.product-card-content {
+    padding: 1rem;
+}
+
+.product-card-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #38bdf8;
+    margin: 0.5rem 0;
+}
+
+.product-shop {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+.product-card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.product-compare-checkbox {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.product-compare-checkbox input {
+    width: 20px;
+    height: 20px;
+}
+
+/* Compare Section */
+.compare-section {
+    padding: 2rem 0;
+}
+
+.compare-container {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow-soft);
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.compare-table th,
+.compare-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.compare-table th {
+    background-color: rgba(255, 255, 255, 0.03);
+    font-weight: 600;
+    color: #cbd5e1;
+}
+
+.compare-table img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.375rem;
+}
+
+/* Offers Grid */
+.offers-section {
+    padding: 2rem 0;
+}
+
+.offers-section h2,
+.shop-offers h3,
+.shop-products h3 {
+    margin-bottom: 2rem;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.offer-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
+    padding: 1.5rem;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.offer-discount {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #22c55e;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.offer-card h3 {
+    color: #e2e8f0;
+    margin-bottom: 0.5rem;
+    padding-right: 80px;
+}
+
+.offer-shop {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.offer-validity {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filters-bar {
+        flex-direction: column;
+    }
+
+    .filters-bar .search-input,
+    .filters-bar .filter-select {
+        width: 100%;
+    }
+
+    .shops-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-detail-header {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .compare-container {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Super Mall</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/user.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="../../index.html">Super Mall</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="shops.html">Shops</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="../auth/login.html" class="btn-primary">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-section">
+            <div class="container">
+                <h2>Browse All Products</h2>
+                
+                <div class="filters-bar">
+                    <input type="text" id="searchProducts" placeholder="Search products..." class="search-input">
+                    
+                    <select id="filterCategory" class="filter-select">
+                        <option value="">All Categories</option>
+                    </select>
+                    
+                    <select id="filterShop" class="filter-select">
+                        <option value="">All Shops</option>
+                    </select>
+                    
+                    <select id="sortBy" class="filter-select">
+                        <option value="name-asc">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                        <option value="price-asc">Price (Low to High)</option>
+                        <option value="price-desc">Price (High to Low)</option>
+                    </select>
+                </div>
+
+                <div class="toolbar">
+                    <button id="compareBtn" class="btn-secondary" disabled>Compare Selected (0)</button>
+                </div>
+
+                <div id="productsGrid" class="products-grid">
+                    <p class="loading-text">Loading products...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Super Mall. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../../js/user-products.js"></script>
+</body>
+</html>

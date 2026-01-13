@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Shop - Super Mall</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="../../index.html">Super Mall Admin</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="manage-shops.html">Shops</a></li>
+                    <li><a href="manage-offers.html">Offers</a></li>
+                    <li><a href="manage-categories.html">Categories</a></li>
+                    <li><a href="#" id="logoutBtn" class="btn-primary">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="container">
+                <h2>Create New Shop</h2>
+                <form id="createShopForm" class="admin-form">
+                    <div class="form-group">
+                        <label for="shopName">Shop Name *</label>
+                        <input type="text" id="shopName" name="shopName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="shopDescription">Description *</label>
+                        <textarea id="shopDescription" name="shopDescription" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="shopCategory">Category *</label>
+                        <select id="shopCategory" name="shopCategory" required>
+                            <option value="">Select Category</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="shopFloor">Floor *</label>
+                        <select id="shopFloor" name="shopFloor" required>
+                            <option value="">Select Floor</option>
+                            <option value="Ground Floor">Ground Floor</option>
+                            <option value="First Floor">First Floor</option>
+                            <option value="Second Floor">Second Floor</option>
+                            <option value="Third Floor">Third Floor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="shopLocation">Location *</label>
+                        <input type="text" id="shopLocation" name="shopLocation" required placeholder="e.g., Shop No. 101, Wing A">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number *</label>
+                        <input type="tel" id="contactNumber" name="contactNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Contact Email *</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="shopImage">Shop Image URL</label>
+                        <input type="url" id="shopImage" name="shopImage" placeholder="https://example.com/image.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="isActive" name="isActive" checked> Active
+                        </label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Create Shop</button>
+                        <a href="manage-shops.html" class="btn-secondary">Cancel</a>
+                    </div>
+                </form>
+                <div id="shopMessage" class="message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Super Mall. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../../js/admin-shop.js"></script>
+</body>
+</html>

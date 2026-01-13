@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Shops - Super Mall</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="../../index.html">Super Mall Admin</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="manage-shops.html">Shops</a></li>
+                    <li><a href="manage-offers.html">Offers</a></li>
+                    <li><a href="manage-categories.html">Categories</a></li>
+                    <li><a href="#" id="logoutBtn" class="btn-primary">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="manage-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Manage Shops</h2>
+                    <a href="create-shop.html" class="btn-primary">+ Add New Shop</a>
+                </div>
+                
+                <div class="filters">
+                    <input type="text" id="searchShops" placeholder="Search shops..." class="search-input">
+                    <select id="filterCategory" class="filter-select">
+                        <option value="">All Categories</option>
+                    </select>
+                    <select id="filterFloor" class="filter-select">
+                        <option value="">All Floors</option>
+                        <option value="Ground Floor">Ground Floor</option>
+                        <option value="First Floor">First Floor</option>
+                        <option value="Second Floor">Second Floor</option>
+                        <option value="Third Floor">Third Floor</option>
+                    </select>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Shop Name</th>
+                                <th>Category</th>
+                                <th>Floor</th>
+                                <th>Location</th>
+                                <th>Contact</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="shopsTableBody">
+                            <tr>
+                                <td colspan="7" class="text-center">Loading shops...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Super Mall. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../../js/admin-shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Super Mall</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="../../index.html">Super Mall Admin</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="manage-shops.html">Shops</a></li>
+                    <li><a href="manage-offers.html">Offers</a></li>
+                    <li><a href="manage-categories.html">Categories</a></li>
+                    <li><a href="#" id="logoutBtn" class="btn-primary">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="container">
+                <h2>Admin Dashboard</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Shops</h3>
+                        <p id="totalShops" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Products</h3>
+                        <p id="totalProducts" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Offers</h3>
+                        <p id="totalOffers" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Categories</h3>
+                        <p id="totalCategories" class="stat-number">0</p>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="action-buttons">
+                        <a href="create-shop.html" class="btn-primary">Create Shop</a>
+                        <a href="manage-offers.html" class="btn-secondary">Manage Offers</a>
+                        <a href="manage-categories.html" class="btn-secondary">Manage Categories</a>
+                    </div>
+                </div>
+
+                <section class="floor-overview">
+                    <div class="section-header">
+                        <div>
+                            <h3>Floor Overview</h3>
+                            <p class="subtext">Live floor-wise breakdown of shops and offers.</p>
+                        </div>
+                        <span class="floor-chip">Realtime</span>
+                    </div>
+                    <div class="floor-grid" id="floorOverviewGrid">
+                        <p class="muted">Loading floor insights…</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Super Mall. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../../js/admin-dashboard.js"></script>
+</body>
+</html>

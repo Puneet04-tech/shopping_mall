@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Offers - Super Mall</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="../../index.html">Super Mall Admin</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="manage-shops.html">Shops</a></li>
+                    <li><a href="manage-offers.html">Offers</a></li>
+                    <li><a href="manage-categories.html">Categories</a></li>
+                    <li><a href="#" id="logoutBtn" class="btn-primary">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="manage-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Manage Offers</h2>
+                    <button id="addOfferBtn" class="btn-primary">+ Add New Offer</button>
+                </div>
+                
+                <div class="filters">
+                    <input type="text" id="searchOffers" placeholder="Search offers..." class="search-input">
+                    <select id="filterShop" class="filter-select">
+                        <option value="">All Shops</option>
+                    </select>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Offer Title</th>
+                                <th>Shop</th>
+                                <th>Discount</th>
+                                <th>Valid From</th>
+                                <th>Valid Until</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="offersTableBody">
+                            <tr>
+                                <td colspan="7" class="text-center">Loading offers...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add/Edit Offer Modal -->
+        <div id="offerModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="modalTitle">Add New Offer</h3>
+                <form id="offerForm" class="admin-form">
+                    <input type="hidden" id="offerId">
+                    <div class="form-group">
+                        <label for="offerTitle">Offer Title *</label>
+                        <input type="text" id="offerTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="offerDescription">Description *</label>
+                        <textarea id="offerDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="offerShop">Shop *</label>
+                        <select id="offerShop" required>
+                            <option value="">Select Shop</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="offerDiscount">Discount (%) *</label>
+                        <input type="number" id="offerDiscount" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="validFrom">Valid From *</label>
+                        <input type="date" id="validFrom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="validUntil">Valid Until *</label>
+                        <input type="date" id="validUntil" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="offerActive" checked> Active
+                        </label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Save Offer</button>
+                        <button type="button" class="btn-secondary" id="cancelOfferBtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Super Mall. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../../js/admin-offers.js"></script>
+</body>
+</html>
