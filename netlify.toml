@@ -1,0 +1,65 @@
+[build]
+  publish = "super-mall-web-app"
+  command = "echo 'No build command needed for static site'"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Content-Type = "text/css"
+
+[[redirects]]
+  from = "/admin"
+  to = "/pages/admin/dashboard.html"
+  status = 302
+
+[[redirects]]
+  from = "/login"
+  to = "/pages/auth/login.html"
+  status = 302
+
+[[redirects]]
+  from = "/register"
+  to = "/pages/auth/register.html"
+  status = 302
+
+[[redirects]]
+  from = "/shops"
+  to = "/pages/user/shops.html"
+  status = 302
+
+[[redirects]]
+  from = "/products"
+  to = "/pages/user/products.html"
+  status = 302
+
+[[redirects]]
+  from = "/offers"
+  to = "/pages/user/offers.html"
+  status = 302
+
+[[redirects]]
+  from = "/compare"
+  to = "/pages/user/compare.html"
+  status = 302
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
